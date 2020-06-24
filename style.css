@@ -1,0 +1,866 @@
+/*====================================================*/
+/*CSS do Login*/
+/*====================================================*/
+
+.login_box,
+.forgot_box {
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo_login {
+    display: block;
+    margin: 0 auto 32px;
+}
+
+.login_box label,
+.forgot_box label {
+    height: 49px;
+}
+
+.forgot_box input[type='mail'],
+.login_box input[type='text'],
+.login_box input[type='password']{
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 235px;
+    height: 49px;
+    padding-right: 4px;
+    padding-left: 18px;
+    color: #ffffff;
+    border-style: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    outline-style: none;
+    background-color: #7a7a7a;
+}
+
+.forgot_box label,
+.login_box label:not([for="connected"]) {
+    display: inline-block;
+    width: 46px;
+    text-align: center;
+    vertical-align: top;
+    color: #606468;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: #232323;
+}
+
+.login_box i[class^='fa'],
+.forgot_box i[class^='fa'] {
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.input_username {
+    margin-bottom: 13px;
+}
+
+.input_submit {
+    margin-top: 32px;
+}
+
+::-webkit-input-placeholder {
+    color: #999999;
+}
+::-moz-placeholder {
+    color: #999999;
+}
+:-moz-placeholder {
+    color: #999999;
+}
+:-ms-input-placeholder {
+    color: #999999;
+}
+
+.cadastrar{
+  float: left;
+}
+
+.entrar{
+  float: right;
+}
+
+.forgot_box input[type='submit'],
+.login_box input[type='submit'] {
+  font-size: 16px;
+  width: 110px;
+  height: 50px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  background-color: #585858;
+}
+
+.forgot_box input[type='submit']:hover,
+.login_box input[type='submit']:hover{
+  background-color: #00A4E5;
+  cursor: pointer;
+}
+
+/*====================================================*/
+/*CSS do Index*/
+/*====================================================*/
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #d2d2d2;
+    min-height: 100%;
+}
+
+.header {
+    background-color: #fafafa;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    height: 106px;
+}
+
+.home {
+    float: left;
+}
+
+.logoTopnav {
+    height: 74px;
+    float: left;
+    position: absolute;
+    top: 15px;
+    left: 36px;
+    cursor: pointer;
+}
+
+.iconesTopnav {
+    position: relative;
+    margin: 0;
+    float: right;
+    top: 29px;
+    right: 36px;
+    padding: 0;
+}
+
+.iconeUsuario {
+    list-style: none;
+    float: right;
+}
+
+i.fas.fa-user-circle.fa-3x {
+    cursor: pointer;
+    display: inline-block;
+}
+
+i.far.fa-clock {
+    color: #999999;
+    margin-right: 4px;
+}
+
+/* .dropdown {
+    position: relative;
+    display: inline-block;
+} */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+i.fas.fa-user-circle.fa-3x:hover .dropdown-content {display: block;}
+
+.logout_dropdown{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    margin-top: 106px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    background-color: #232323;
+    color: white;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #7a7a7a;
+    color: white;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 125px 16px 16px 16px;
+    min-height: 100%;
+	position: relative;
+}
+
+/* @media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+} */
+
+.grid {
+    /* Grid Fallback */
+    display: flex;
+    flex-wrap: wrap;
+    
+    /* Supports Grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 1em;
+    margin-bottom: 16px;
+    padding-bottom: 206px;
+}
+  
+.grid a:not(.popup__close),
+.grid a:visited:not(.popup__close:hover) {
+    color: #006ce5;
+}
+  
+.module {
+    /* Demo-Specific Styles */
+    background: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    
+    /* Flex Fallback */
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1 1 200px;
+}
+  
+/* If Grid is supported, remove the margin we set for the fallback */
+@supports (display: grid) {
+    .module {
+        margin: 0;
+    }
+}
+  
+.content .grid .module img:hover {
+  opacity: 0.65;
+  -moz-opacity: 0.65;
+  filter: alpha(opacity = 65);
+  cursor: pointer;
+}
+  
+.popup__overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(72, 72, 72, 0.95);
+    text-align: center;
+    z-index: 100;
+}
+  
+.popup__overlay:after {
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+    content: "";
+}
+
+.content .popup {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 66.5%;
+    max-height: 90%;
+    vertical-align: middle;
+}
+  
+/* .content .popup-form__row {
+    margin: 1em 0;
+} */
+  
+.content .popup__close {
+    display: block;
+    position: absolute;
+    top: -22px;
+    right: 0px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+    color: rgba(255, 253, 251, 0.95);
+    text-decoration: none;
+}
+  
+.content .popup__close:hover {
+    color: #eea200;
+}
+  
+.content iframe {
+    width: 100%;
+    height: 100%;
+}
+
+h2.text-primary {
+    padding-left: 1.5rem;
+    border-left: 5px solid #232323;
+}
+
+[class*="row-"] {
+    overflow: initial;
+}
+
+.text-primary {
+    color: #232323;
+    margin: 16px 0;
+    display: inline-block;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+body, h1, h2, 
+h4, h5, h6, .h1, 
+.h2, .h4
+{
+    font-family: RobotoDraft,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;  
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.h2
+{
+    line-height: 1.1;
+}
+
+/* ==============NORMALIZE.CSS============= */
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+ 
+main {
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+a {
+    background-color: transparent;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+img {
+    border-style: none;
+}
+
+  /* ========= RESPONSIVO.CSS ============ */
+
+@media screen and (min-width: 0) {
+    .destaques__principal, .destaques__categorias {
+        grid-column: 1 / 5;
+    }
+
+    .destaques__secundario:nth-child(2) {
+        display: none;
+        grid-column: none;
+        grid-row: none;
+    }
+
+    .destaques__secundario:nth-child(3) {
+        display: none;
+        grid-column: none;
+        grid-row: none;
+    }    
+
+    .noticias__conteudo {
+        flex-direction: column;
+        padding-bottom: 206px;
+    }
+
+    .noticias__card {
+        grid-template-rows: 150px auto;
+        margin-bottom: 16px;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .destaques__principal {
+        grid-column: 1 / 4;
+    }
+
+    .destaques__secundario:nth-child(2) {
+        display: flex;
+        grid-column: 4 / 4;
+        grid-row: 1 / 1;
+    }
+
+    .destaques__secundario:nth-child(3) {
+        display: flex;
+        grid-column: 4 / 4;
+        grid-row: 2 / 2;
+    }    
+
+    .destaques__categorias {
+        grid-column: 1 / 3;
+    }
+
+    .noticias__conteudo {
+        flex-direction: row;
+    }
+
+    .noticias__card {
+        grid-template-rows: 142.06px auto;
+        margin-right: 16px;
+        width: calc(50% - 16px);
+    }
+}
+@media screen and (min-width: 992px) {
+    .noticias__card {
+        width: calc(33.33% - 16px);
+    }
+}
+@media screen and (min-width: 1200px) {
+    .noticias__card {
+        margin-bottom: 0; 
+        width: calc(20% - 16px);
+    }
+}
+
+/*========== STYLE.CSS ==========*/
+.conteudo {
+    grid-area: conteudo;
+    padding-right: 10px;
+    margin-bottom: 16px;
+}
+
+/* ========== RESET.CSS ========== */
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.destaques div, .noticias__conteudo .noticias__card___imagem {
+    cursor: pointer;    
+    object-fit: cover;
+}
+
+.noticias__card:hover{
+    opacity: 0.90;
+}
+
+header ul, header li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a:hover, button:hover {
+    cursor: pointer;
+}
+
+/* ======= DESTAQUES ======== */
+
+.caixa {
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+}
+
+.destaques {
+    display: grid;
+    grid-gap: .2rem;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    height: calc(100vh - 187px);
+}
+
+.destaques__titulo {
+    background: rgba(41, 34, 34, 0.5);
+    color: #fdfdfd;
+    padding: .8rem;
+    width: 100%;
+    font-size: 24px;
+}
+
+.destaques__principal {
+    background: url('img/finalFantasy_1.jpg') center / cover no-repeat;
+    grid-row: 1 / 3;
+}
+
+.destaques__secundario:nth-child(2) {
+    background: url('img/halo.jpg') center / cover no-repeat;
+}
+
+.destaques__secundario:nth-child(3) {
+    background: url('img/skullAndBones.png') center / cover no-repeat;
+}
+
+.destaques__principal:hover, .destaques__secundario:hover {
+    opacity: 0.90;
+}
+
+/* ================== NOTICIAS ================== */
+
+.noticias {
+    padding: 3rem 0;
+}
+
+.noticias__conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -16px;
+    margin-bottom: 16px;
+}
+
+.noticias__card {
+    background: #fdfdfd;
+    display: grid;
+    grid-template-areas: 
+        "card-imagem"
+        "card-corpo";
+    grid-template-columns: 100%;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1), 0px 0px 3px 0px rgba(0, 0, 0, 0.19);
+}
+
+.noticias__card:last-child { 
+    margin-right: 0;
+}
+ 
+.noticias__card___imagem {
+    grid-area: card-imagem;
+    height: 100%;
+    width: 100%;
+}
+
+.noticias__card___corpo {
+    display: grid;
+    grid-area: card-corpo;
+    grid-row-gap: .5rem;
+    grid-template-areas: 
+        "card-cabecalho"
+        "card-conteudo";
+    padding: .75rem;
+}
+
+.noticias__card___titulo {
+    color: #333333;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.noticias__card___titulo:hover {
+    color: #009688;
+}
+
+.noticias__card___data {
+    color: #999;
+    font-size: .9rem;
+}
+
+.noticias__card___descricao {
+    color: #333333;
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+    align-self: flex-end;
+}
+
+/* .noticias__titulo {
+    font-weight: 500;
+}
+
+.noticias__icone {
+    margin-right: .25rem;
+}
+
+.noticias__cabecalho {
+    border-bottom: 1px solid #dcdcdc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.noticias__botao {
+    background: transparent;
+    border: none;
+    color: #333333;
+} */
+
+.bgNoticia {
+    position: relative;
+    opacity: 0.70;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg-1 {
+    background-image: url('img/finalFantasy_1.jpg');
+    min-height: 400px;
+}
+
+.bgimg-2 {
+    background-image: url('img/finalFantasy_3.jpg');
+    min-height: 400px;
+}
+
+.bgimg-3 {
+    background-image: url('img/avengers.jpg');
+    min-height: 400px;
+}
+
+.bgimg-4 {
+    background-image: url('img/outriders.jpg');
+    min-height: 400px;
+}
+
+.bgimg-5 {
+    background-image: url('img/dyingLight2.jpg');
+    min-height: 400px;
+}
+
+.bgimg-6 {
+    background-image: url('img/babylonsFall.jpg');
+    min-height: 400px;
+}
+
+.bgimg-7 {
+    background-image: url('img/halo.jpg');
+    min-height: 400px;
+}
+
+.bgimg-8 {
+    background-image: url('img/doomEternal.jpg');
+    min-height: 400px;
+}
+
+.bgimg-9 {
+    background-image: url('img/watchDogs.jpg');
+    min-height: 400px;
+}
+
+.bgimg-10 {
+    background-image: url('img/skullAndBones.png');
+    min-height: 400px;
+}
+
+.bgimg-11 {
+    background-image: url('img/rainbowSix.jpg');
+    min-height: 400px;
+}
+
+.bgimg-12 {
+    background-image: url('img/ghostRecon_2.jpg');
+    min-height: 400px;
+}
+
+.bgimg-13 {
+    background-image: url('img/justDance.jpg');
+    min-height: 400px;
+}
+
+.bgimg-14 {
+    background-image: url('img/ubisoftPass.jpg');
+    min-height: 400px;
+}
+
+.bgimg-15 {
+    background-image: url('img/marioRabbids.jpg');
+    min-height: 400px;
+}
+
+.bgimg-16 {
+    background-image: url('img/assassinsCreed.jpg');
+    min-height: 400px;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 48%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    padding: 0 35px;
+}
+
+.caption2 {
+    width: 100%;
+    text-align: center;
+    color: #000;
+    padding: 0 35px;
+    opacity: 0.70;
+    margin: 2.5rem 0 2rem 0;
+}
+
+.caption span.border, .caption2 span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 2.5;
+}
+
+h3 .subtitulo {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #111;
+    text-align: center;
+}
+
+.texto {
+    color: #777;
+    background-color: white;
+    text-align: center;
+    padding: 50px 80px;
+    text-align: justify;
+    font: 400 15px/1.8 "Lato", sans-serif;
+}
+
+.textoLast {
+    padding-bottom: 256px;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+/* @media only screen and (max-device-width: 1024px) {
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3,
+    .bgimg-4,
+    .bgimg-5,
+    .bgimg-6,
+    .bgimg-7,
+    .bgimg-8 {
+        background-attachment: scroll;
+    }
+} */
+
+.linkNoticia {
+    color: #009688;
+}
+
+.linkNoticia:hover {
+    text-decoration: underline;
+}
+
+.fonteNoticia {
+    padding-top: 40px;
+}
+
+/* ========= FOOTER ============ */
+
+.footer {
+    color:#ddd;
+    background-color:#282E34;
+    text-align:center;
+    padding:17px 80px;
+    width: calc(100% + -32px);
+	position: absolute;
+	bottom: 16px;
+}
+
+.iconesFooter {
+    padding: 0;
+    margin: 0;
+    font-size: 4em;
+}
+
+.iconeLinkedIn, .iconeGitHub {
+    display: inline-block;
+}
+
+.footer a {
+    color:#ddd;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.poweredBy {
+    margin-top: 47px;
+    margin-bottom: 0;
+}
+
+.texto ul {
+    margin-bottom: 1rem;
+}
+
+.content {
+    overflow-y: auto;
+    height: calc(100% - 106x);
+    box-sizing: border-box;
+} 

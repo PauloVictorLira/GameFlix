@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<title>Início - GameFlix</title>
+</head>
+<body>
+	<header class="header">
+		<a href="#" class="home"><img src="img/logo.png" class="logoTopnav" alt="Logo GameFlix"></a>
+		<ul class="iconesTopnav">
+			<li class="iconeUsuario">
+				<i class="fas fa-user-circle fa-3x">
+					<div class="dropdown-content">
+						<a class="logout_dropdown" href="login.html">Sair</a>
+					</div>
+				</i>
+			</li>
+		</ul>
+	</header>
+
+	<div class="sidebar">
+		<a class="active" href="#">Início</a>
+		<a href="meus_jogos.html">Meus Jogos</a>
+		<a href="biblioteca.html">Biblioteca</a>
+		<a href="sobre.html">Sobre</a>
+	</div>
+
+	<div class="content" class="app">
+		<h2 class="text-primary text-uppercase row-right-md">Destaques</h2>
+		<main class="conteudo">
+			<section class="destaques">
+				<div class="destaques__principal caixa"
+					onclick="abrirJanela('noticia1.html')">
+					<h3 class="destaques__titulo">E3 2019: Conferência da Square Enix terá Final Fantasy 7 Remake e mais
+					</h3>
+				</div>
+				<div class="destaques__secundario caixa"
+					onclick="abrirJanela('noticia2.html')">
+					<h3 class="destaques__titulo">E3 2019: Microsoft e Bethesda apresentam novidades neste domingo</h3>
+				</div>
+				<div class="destaques__secundario caixa"
+					onclick="abrirJanela('noticia3.html')">
+					<h3 class="destaques__titulo">E3 2019: Conferência da Ubisoft terá Watch Dogs Legion e novos jogos
+					</h3>
+				</div>
+			</section>
+		</main>
+
+		<h2 class="text-primary text-uppercase row-right-md">Notícias</h2>
+		<div class="noticias__conteudo">
+			<div class="noticias__card">
+				<a href="https://www.promobit.com.br/blog/e3-2019-horarios-das-conferencias/" target=”_blank”>
+					<img class="noticias__card___imagem" src="img/e3.jpg" alt="Logo E3"></img>
+					<div class="noticias__card___corpo">
+						<div class="noticias__card___cabecalho">
+							<h5 class="noticias__card___titulo">E3 2019 – Horários das conferências</h5>
+						</div>
+				</a>
+						<div class="noticias__card___descricao">
+							<i class="far fa-clock"></i><time class="noticias__card___data" datetime="2019-06-08">08/06/2019</time>
+						</div>
+					</div>
+			</div>
+
+			<div class="noticias__card">
+				<a href="https://www.voxel.com.br/noticias/xbox-game-pass-pc-disponivel-brasil_844069.htm" target=”_blank”>
+					<img class="noticias__card___imagem" src="img/xboxGamePass.jpg" alt="Xbox Game Pass"></img>
+					<div class="noticias__card___corpo">
+						<div class="noticias__card___cabecalho">
+							<h5 class="noticias__card___titulo">Xbox Game Pass para PC já está disponível no Brasil</h5>
+						</div>
+				</a>
+						<div class="noticias__card___descricao">
+							<i class="far fa-clock"></i><time class="noticias__card___data" datetime="2019-06-09">09/06/2019</time>
+						</div>
+					</div>
+			</div>
+
+			<div class="noticias__card">
+				<a href="https://g1.globo.com/pop-arte/games/noticia/2019/06/10/e3-2019-ubisoft-e-square-enix-apresentam-conferencias-nesta-segunda-feira.ghtml" target=”_blank”>
+					<img class="noticias__card___imagem" src="img/ghostRecon_1.jpg" alt="Ghost Recon Breakpoint"></img>
+					<div class="noticias__card___corpo">
+						<div class="noticias__card___cabecalho">
+							<h5 class="noticias__card___titulo">E3 2019: Ubisoft e Square Enix apresentam conferências nesta segunda-feira</h5>
+						</div>
+				</a>
+						<div class="noticias__card___descricao">
+							<i class="far fa-clock"></i><time class="noticias__card___data" datetime="2019-06-10">10/06/2019</time>
+						</div>
+					</div>
+			</div>
+
+			<div class="noticias__card">
+				<a href="https://www.voxel.com.br/especiais/e3-2019-dias-horarios-assistir-conferencias-onde_843872.htm" target=”_blank”>
+					<img class="noticias__card___imagem" src="img/voxelVideo.jpg" alt="Voxel"></img>
+					<div class="noticias__card___corpo">
+						<div class="noticias__card___cabecalho">
+							<h5 class="noticias__card___titulo">E3 2019: dias e horários para assistir as conferências - como, quando, onde</h5>
+						</div>
+				</a>
+						<div class="noticias__card___descricao">
+							<i class="far fa-clock"></i><time class="noticias__card___data" datetime="20019-06-03">03/06/2019</time>
+						</div>
+					</div>
+			</div>
+
+			<div class="noticias__card">
+				<a href="https://g1.globo.com/pop-arte/games/noticia/2019/06/10/novo-final-fantasy-vii-vai-ser-lancado-em-marco-de-2020.ghtml" target=”_blank”>
+					<img class="noticias__card___imagem" src="img/finalFantasy_2.jpg" alt="Final Fantasy VII"></img>
+					<div class="noticias__card___corpo">
+						<div class="noticias__card___cabecalho">
+							<h5 class="noticias__card___titulo">Novo 'Final Fantasy VII' vai ser lançado em março de 2020</h5>
+						</div>
+				</a>
+						<div class="noticias__card___descricao">
+							<i class="far fa-clock"></i><time class="noticias__card___data" datetime="2019-06-10">10/06/2019</time>
+						</div>
+					</div>
+			</div>	
+
+		<div class="footer">
+			<ul class="iconesFooter">
+				<li class="iconeLinkedIn">
+					<a class="" href="https://www.linkedin.com/in/paulovictorlira/" target="_blank">
+						<i class="fab fa-linkedin"></i>
+					</a>
+				</li>
+				<li class="iconeGitHub">
+					<a class="" href="https://github.com/PauloVictorLira" target="_blank">
+						<i class="fab fa-github"></i>
+					</a>
+				</li>
+			</ul>
+
+			<p><i class="fas fa-envelope"></i> Email: <a href="mailto:paulovictorlira@hotmail.com">paulovictorlira@hotmail.com</a></p>
+
+			<p class="poweredBy">&copy 2020 &middot Powered by <b><a class="" href="https://www.linkedin.com/in/paulovictorlira/" target="_blank">Paulo Victor Lira</b></a></p>
+		</div>
+	</div>
+	
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	<script src="script.js"></script>
+</body>
+
+</html>
