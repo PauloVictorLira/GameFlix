@@ -126,7 +126,7 @@ body {
     height: 106px;
 }
 
-.openSidebar {
+i.fas.fa-bars {
     visibility: hidden;
 }
 
@@ -167,11 +167,6 @@ i.far.fa-clock {
     margin-right: 4px;
 }
 
-/* .dropdown {
-    position: relative;
-    display: inline-block;
-} */
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -201,10 +196,10 @@ i.fas.fa-user-circle.fa-3x:hover .dropdown-content {display: block;}
 .backgroundSide {
     width: 0;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: #8070706b;
+    background-color: rgba(0, 0, 0, 0.4);;
     z-index: 98;
 }
 
@@ -242,23 +237,6 @@ i.fas.fa-user-circle.fa-3x:hover .dropdown-content {display: block;}
     min-height: 100%;
 	position: relative;
 }
-
-/* @media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
-}
-
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-} */
 
 .grid {
     /* Grid Fallback */
@@ -336,10 +314,6 @@ i.fas.fa-user-circle.fa-3x:hover .dropdown-content {display: block;}
     max-height: 90%;
     vertical-align: middle;
 }
-  
-/* .content .popup-form__row {
-    margin: 1em 0;
-} */
   
 .content .popup__close {
     display: block;
@@ -486,10 +460,12 @@ img {
 
 /* ==== 768px ==== */
 @media only screen and (max-width: 768px) {
-    .openSidebar {
+    i.fas.fa-bars {
         visibility: visible;
-        font-size: 30px;
         cursor: pointer;
+        position: absolute;
+        top: 37px;
+        left: 45.25px;
     }
     
     .logoTopnav {        
@@ -497,15 +473,12 @@ img {
     }
     
     .sidebar {
-        /* display: none; */
         z-index: 99;
-        /*overflow-x: hidden;*/
-        transition: 0.5s;
+        transition: 0.3s;
         margin-top: 0;
         width: 0;
     }
 
-    /* OPCIONAL???? */
     .sidebar a {
         display: block;
     }
@@ -542,6 +515,11 @@ img {
 
     .caption {
         top: 24%;
+    }
+
+    .content .popup {
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 /* ===== */

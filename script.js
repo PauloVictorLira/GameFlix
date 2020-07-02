@@ -1,31 +1,6 @@
-//funções
-
-function abrirJanela(link, e) {
+function abrirDestaque(link, e) {
   window.open(link, "_self");
 }
-
-//PLAY GAMES
-
-var p = $(".popup__overlay");
-
-$(".popup__close").click(
-  function () {
-    $("iframe").attr("src", "");
-  }
-);
-
-$(".module").click(function (e) {
-  var link = $(this).data("jogo");
-
-  $("iframe").attr("src", link);
-  $(".popup__overlay").css("display", "block");
-
-});
-
-$(".popup__close").click(function () {
-  p.css("display", "none");
-});
-
 
 function openNav() {
   document.getElementsByClassName("sidebar")[0].style.width = "200px";
@@ -56,7 +31,24 @@ $(window).resize(function () {
   }
 });
 
-// $('a').click( function(e) {
-//   e.preventDefault();
-//   return false;
-// });
+//========= PLAY GAMES =========
+
+var p = $(".popup__overlay");
+
+$(".popup__close").click(
+  function () {
+    $("iframe").attr("src", "");
+  }
+);
+
+$(".module").click(function (e) {
+  var link = $(this).data("jogo");
+
+  $("iframe").attr("src", link);
+  $(".popup__overlay").css("display", "block");
+
+});
+
+$(".popup__close").click(function () {
+  p.css("display", "none");
+});
