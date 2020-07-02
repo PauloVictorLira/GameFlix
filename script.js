@@ -47,6 +47,21 @@ $(".module").click(function (e) {
   $("iframe").attr("src", link);
   $(".popup__overlay").css("display", "block");
 
+  var width = $(window).width();
+  if (width < 768) {
+    if (!!window.performance && window.performance.navigation.type === 2) {
+      // value 2 means "The page was accessed by navigating into the history"
+      console.log('Reloading');
+      window.location.reload(); // reload whole page
+    }
+
+    window.onpageshow = function (event) {
+      if (event.persisted) {
+          window.location.reload();
+        }
+    };
+  }
+
 });
 
 $(".popup__close").click(function () {
