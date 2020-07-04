@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+	<title>Mobile Games - GameFlix</title>
+</head>
+<body>
+	<header class="header">
+		<i class="fas fa-bars fa-2x" onclick="openSidebar()"></i>		
+		<a href="index.html" class="home"><img src="img/logo.png" class="logoTopnav" alt="Logo GameFlix"></a>
+		<ul class="iconesTopnav">
+			<li class="iconeUsuario">
+				<i class="fas fa-user-circle fa-3x">
+					<div class="dropdown-content">
+						<a class="logout_dropdown" href="#">Sair</a>
+					</div>
+				</i>
+			</li>
+		</ul>
+	</header>
+
+	<div class="backgroundSide">
+		<div class="sidebar">
+			<a href="index.html">Início</a>
+			<a class="active" href="mobileGames.html">&ensp;Mobile Games</a>
+			<a href="pcGames.html">&ensp;PC Games</a>
+			<a href="sobre.html">Sobre</a>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="grid">
+
+			<div class="module" data-jogo="https://www.retrogames.cc/embed/18468-sonic-the-hedgehog-2-world.html">
+				<img src="img/sonic2.jpg" alt="Sonic the Hedgehog 2" width="100%" height="100%">
+			</div>
+
+			<div class="module" data-jogo="https://www.retrogames.cc/embed/28170-super-mario-world-super-mario-advance-2-e-cezar.html">
+				<img src="img/marioWorld.jpg" alt="Super Mario World" width="100%" height="100%">
+			</div>
+			
+			<div class="module" data-jogo="https://www.retrogames.cc/embed/26492-donkey-kong-country-e-menace.html">
+				<img src="img/donkeyKong.jpg" alt="Donkey Kong Country" width="100%" height="100%">
+			</div>
+
+			<div class="module" data-jogo="https://www.retrogames.cc/embed/26820-disney-s-magical-quest-3-starring-mickey-and-donald-u-trashman.html">
+				<img src="img/mickey.png" alt="Disney's Magical Quest 3" width="100%" height="100%">
+			</div>			
+
+			<div class="module" data-jogo="https://www.retrogames.cc/embed/26106-pokemon-ruby-u-mugs.html">
+				<img src="img/pokemonRuby.jpg" alt="Pokemon Ruby" width="100%" height="100%">
+			</div>
+
+			<div class="module" data-jogo="https://www.retrogames.cc/embed/9293-neo-bomberman.html">
+				<img src="img/neoBomberman.jpg" alt="Neo Bomberman" width="100%" height="100%">
+			</div>
+
+			<div class="module" data-jogo="https://www.retrogames.cc/embed/10132-sunset-riders-4-players-ver-uda.html">
+				<img src="img/sunsetRiders.jpg" alt="Sunset Riders" width="100%" height="100%">
+			</div>
+
+			<div class="module" data-jogo="https://www.retrogames.cc/embed/9170-metal-slug-x-super-vehicle-001-ngm-2500-ngh-2500.html">
+				<img src="img/metalSlugX.png" alt="Metal Slug X" width="100%" height="100%">
+			</div>
+		
+			<div class="module" data-jogo="https://www.retrogames.cc/embed/10252-tecmo-world-soccer-96.html">
+				<img src="img/tws96.png" alt="Tecmo World Soccer '96" width="100%" height="100%">
+			</div>	
+
+			<div class="module" data-jogo="https://www.retrogames.cc/embed/34551-the-king-of-fighters-98-the-slugfest-king-of-figh.html">
+				<img src="img/kof98.png" alt="The King of Fighters '98" width="100%" height="100%">
+			</div>			
+
+			<div class="module" data-jogo="https://www.retrogames.cc/embed/23432-ultimate-mortal-kombat-3-usa.html">
+				<img src="img/mk3.png" alt="Mortal Kombat 3" width="100%" height="100%">
+			</div>
+			
+			<div class="module" data-jogo="https://www.retrogames.cc/embed/9970-street-fighter-alpha-3-980629-usa.html">
+				<img src="img/sfa3.jpg" alt="Street Fighter Alpha 3" width="100%" height="100%">
+			</div>
+			
+		</div>
+
+		<div class="footer">
+			<ul class="iconesFooter">
+				<li class="iconeLinkedIn">
+					<a class="" href="https://www.linkedin.com/in/paulovictorlira/" target="_blank">
+						<i class="fab fa-linkedin"></i>
+					</a>
+				</li>
+				<li class="iconeGitHub">
+					<a class="" href="https://github.com/PauloVictorLira" target="_blank">
+						<i class="fab fa-github"></i>
+					</a>
+				</li>
+			</ul>
+
+			<p><i class="fas fa-envelope"></i> Email: <a href="mailto:paulovictorlira@hotmail.com">paulovictorlira@hotmail.com</a></p>
+
+			<p class="poweredBy">&copy; 2020 &middot; Powered by <b><a class="" href="https://www.linkedin.com/in/paulovictorlira/" target="_blank">Paulo Victor Lira</b></a></p>
+		</div>
+
+		<div class="popup__overlay">
+			<div class="popup" id="popupVid">
+				<a href="#" class="popup__close">×</a>
+				<iframe frameborder="0" scrolling="no"></iframe>
+			</div>
+		</div>
+	</div>
+	
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	<script src="script.js"></script>
+</body>
+</html>

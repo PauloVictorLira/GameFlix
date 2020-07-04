@@ -1,12 +1,15 @@
+//Abre o link da grid "Destaque"
 function abrirDestaque(link, e) {
   window.open(link, "_self");
 }
 
-function openNav() {
+//Abre o sidebar em Mobile
+function openSidebar() {
   document.getElementsByClassName("sidebar")[0].style.width = "200px";
   document.getElementsByClassName("backgroundSide")[0].style.width = "100%";
 }
 
+//Fecha o sidebar em Mobile
 document.addEventListener('click', evt => {
   var width = $(window).width();
   if (width <= 768) {
@@ -17,6 +20,7 @@ document.addEventListener('click', evt => {
   }
 }, true);
 
+//Reseta sidebar, em caso de redimensionamento de Mobile para Desktop
 $(window).resize(function () {
   var width = $(window).width();
   if (width > 768) {
@@ -35,35 +39,18 @@ $(window).resize(function () {
 
 var p = $(".popup__overlay");
 
-$(".popup__close").click(
-  function () {
-    $("iframe").attr("src", "");
-  }
-);
-
+//Abre o jogo
 $(".module").click(function (e) {
   var link = $(this).data("jogo");
 
   $("iframe").attr("src", link);
   $(".popup__overlay").css("display", "block");
 
-  var width = $(window).width();
-  if (width < 768) {
-    if (!!window.performance && window.performance.navigation.type === 2) {
-      // value 2 means "The page was accessed by navigating into the history"
-      console.log('Reloading');
-      window.location.reload(); // reload whole page
-    }
-
-    window.onpageshow = function (event) {
-      if (event.persisted) {
-          window.location.reload();
-        }
-    };
-  }
-
 });
 
+//Fecha o jogo
 $(".popup__close").click(function () {
+  
+  $("iframe").attr("src", ""); 
   p.css("display", "none");
 });
